@@ -1,6 +1,4 @@
-package EstudosGubee.Model;
-
-import java.math.BigDecimal;
+package EstudosGubee.singleResponsibility.Model;
 
 public class EstudosGubeeFuncionario {
     private String cpf;

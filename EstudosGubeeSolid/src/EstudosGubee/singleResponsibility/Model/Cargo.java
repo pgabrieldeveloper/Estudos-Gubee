@@ -1,8 +1,8 @@
-package EstudosGubee.Model;
+package EstudosGubee.singleResponsibility.Model;
 
-import EstudosGubee.Regras.RegraDeCalaculo;
-import EstudosGubee.Servicos.DezPorcento;
-import EstudosGubee.Servicos.VintePorcento;
+import EstudosGubee.singleResponsibility.Regras.RegraDeCalaculo;
+import EstudosGubee.singleResponsibility.Servicos.DezPorcento;
+import EstudosGubee.singleResponsibility.Servicos.VintePorcento;
 
 public enum Cargo {
     DESENVOLVEDOR(new DezPorcento()),

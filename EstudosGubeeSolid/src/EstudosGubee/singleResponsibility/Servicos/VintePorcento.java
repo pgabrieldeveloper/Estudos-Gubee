@@ -1,7 +1,7 @@
-package EstudosGubee.Servicos;
+package EstudosGubee.singleResponsibility.Servicos;
 
-import EstudosGubee.Model.EstudosGubeeFuncionario;
-import EstudosGubee.Regras.RegraDeCalaculo;
+import EstudosGubee.singleResponsibility.Model.EstudosGubeeFuncionario;
+import EstudosGubee.singleResponsibility.Regras.RegraDeCalaculo;
 
 public class VintePorcento implements RegraDeCalaculo {
     @Override
