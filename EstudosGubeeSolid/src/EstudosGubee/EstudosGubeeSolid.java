@@ -1,5 +1,8 @@
 package EstudosGubee;
 
+import EstudosGubee.DIP.Aparelho;
+import EstudosGubee.DIP.Botao;
+import EstudosGubee.DIP.Celular;
 import EstudosGubee.OpenClosed.model.Compra;
 import EstudosGubee.OpenClosed.servicos.CalculadoraDePrecos;
 import EstudosGubee.OpenClosed.servicos.FreteComum;
@@ -78,9 +81,19 @@ public class EstudosGubeeSolid {
         pinguim.porOvos();
         pinguim.voar();
         System.out.println("----------------------------------------------------------");
+        /*
+            DIP
+            Significado: Módulos de alto nível não devem depender de módulos de baixo nível.
+            Ambos devem depender de abstrações;– Abstrações não devem depender de detalhes.
+            Detalhes devem depender de abstrações
 
-
-
+            No exemplo abaixo o botão não necessita da lampada nem a lambada do botão ambos dependem da abstração do aparelho
+         */
+        Aparelho celular = new Celular();
+        Botao botao = new Botao(celular);
+        botao.ligarAparalho();
+        botao.desligarAparelho();
+        System.out.println("----------------------------------------------------------");
 
 
     }
