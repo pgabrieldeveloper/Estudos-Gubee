@@ -3,6 +3,8 @@ package EstudosGubee;
 import EstudosGubee.OpenClosed.model.Compra;
 import EstudosGubee.OpenClosed.servicos.CalculadoraDePrecos;
 import EstudosGubee.OpenClosed.servicos.FreteComum;
+import EstudosGubee.interfaceSegregataion.model.Pardal;
+import EstudosGubee.interfaceSegregataion.model.Pinguim;
 import EstudosGubee.liskov.model.Client;
 import EstudosGubee.liskov.model.ClientVip;
 import EstudosGubee.liskov.model.Quadrado;
@@ -49,13 +51,34 @@ public class EstudosGubeeSolid {
 //        System.out.println("----------------------------------------------------------");
 
         /*
-            No exemplo abaiaxo não fera o principio de liskov pois o clientVip pode ser usado como sua claasse base
+            No exemplo abaiaxo não fera o principio de liskov pois o clientVip pode ser usado como sua classe base
          */
         Client client = new Client("Paulo", "Av a 571");
         ClientVip clientVip = new ClientVip("Paulo Gabriel ", "Av a 571");
         client.pagarConta();
         clientVip.pagarConta();
         System.out.println("----------------------------------------------------------");
+
+        /*
+            O Princípio da Segregação de Interface trata da coesão de interfaces e diz que
+            clientes não devem ser forçados a depender de métodos que não usam
+
+            A classe Piguim é obrigada a implementar o metodo Voar() mesmo que um piguim nãp voe
+            para corrigir seria necessario criar uma interface aves e uma interface avesQueVoa
+         */
+        Pardal pardal = new Pardal();
+        Pinguim pinguim = new Pinguim();
+
+
+        pardal.baterAsas();
+        pardal.porOvos();
+        pardal.voar();
+
+        pinguim.baterAsas();
+        pinguim.porOvos();
+        pinguim.voar();
+        System.out.println("----------------------------------------------------------");
+
 
 
 
